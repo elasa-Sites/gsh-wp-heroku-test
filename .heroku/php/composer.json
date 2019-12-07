@@ -1,0 +1,50 @@
+{
+    "config": {
+        "cache-files-ttl": 0,
+        "discard-changes": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": false,
+    "provide": {
+        "heroku-sys\/cedar": "14.2019.12.05"
+    },
+    "require": {
+        "composer.json\/composer.lock": "dev-d746cd64df85d06b25c0fa434556463b",
+        "heroku-sys\/apache": "^2.4.10",
+        "heroku-sys\/nginx": "^1.8.0"
+    },
+    "require-dev": {},
+    "repositories": [
+        {
+            "packagist": false
+        },
+        {
+            "type": "path",
+            "url": "\/app\/tmp\/buildpacks\/82eb9daa27a4e8aa500f0928a93813005d4f22d402a9388e00a0c060bea9214ffa9a9176f048b9b0f8ec2e694d858c161f487786f4a98109099a3811127a54c5\/support\/installer\/",
+            "options": {
+                "symlink": false
+            }
+        },
+        {
+            "type": "composer",
+            "url": "https:\/\/lang-php.s3.amazonaws.com\/dist-cedar-14-stable\/"
+        },
+        {
+            "type": "package",
+            "package": [
+                {
+                    "type": "metapackage",
+                    "name": "composer.json\/composer.lock",
+                    "version": "dev-d746cd64df85d06b25c0fa434556463b",
+                    "require": {
+                        "heroku-sys\/ext-mbstring": "*",
+                        "heroku-sys\/php": "^7.0"
+                    },
+                    "replace": {},
+                    "provide": {},
+                    "conflict": {}
+                }
+            ]
+        }
+    ]
+}
